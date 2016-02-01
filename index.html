@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HourClass</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!--fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,100,300' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header clearfix">
+            <!-- <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="#">Contact</a></li>
+          </ul>
+        </nav> -->
+            <h1><span class="glyphicon glyphicon-hourglass"></span>HourClass</h1>
+        </div>
+
+        <div class="jumbotron">
+            <h2><span id="hrMin"></span><span id="sec"></span></h2>
+            <a id="import" class="btn btn-lg btn-primary" href="#" role="button" onclick="importRoster()">Import Roster</a>
+            <a id="generate" class="btn btn-lg btn-warning" href="#" role="button" onclick="generateButtons()">Generate Buttons</a>
+        </div>
+
+        <div id="students" class="row marketing">
+            <!--<button id="s1" type="button" class="btn btn-success btn-lg col-lg-6 student">Student 1</button>-->
+            <!--<button id="s2" type="button" class="btn btn-success btn-lg col-lg-6 student">Student 2</button>-->
+            <!--<button id="s3" type="button" class="btn btn-success btn-lg col-lg-6 student">Student 3</button>-->
+            <!--<button id="s4" type="button" class="btn btn-success btn-lg col-lg-6 student">Student 4</button>-->
+        </div>
+
+        <div class="row">
+            <div id="summary">
+                <table id="dispTable" class="table center-table">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Exits</th>
+                            <th>Total Time</th>
+                        </tr>
+                    </thead>
+                    <!--<tr>-->
+                    <!--    <td>Student1</td>-->
+                    <!--    <td>0</td>-->
+                    <!--    <td>0</td>-->
+                    <!--</tr>-->
+                </table>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2016 NCTB</p>
+        </footer>
+
+    </div>
+    <!-- /container -->
+
+</body>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src='fileio.js'></script>
+<script src='script.js'></script>
+
+</html>
