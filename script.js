@@ -93,6 +93,7 @@ function generateButtons() {
     })
     setClickListener();
     generateTable();
+    resetState();
 }
 
 
@@ -131,7 +132,7 @@ function generateTable() {
 function updateTable() {
     data['studentData'].forEach(function(d, i) {
         var exits = d.outTimes.length;
-        var tOut = d.totalOutTime;
+        var tOut = d.totalOutTime/1000;
         var idString = 'table' + d.sID;
         $('#'+idString+'exits').html(exits);
         $('#'+idString+'tout').html(tOut);
@@ -151,6 +152,13 @@ function getTime() {
     document.getElementById("sec").innerHTML = sec;
 }
 setInterval(getTime, 1000);
+
+function resetState(){
+    console.log("asdf");
+    data['studentData'].forEach(function(d,i){
+        data['studentData'][i].state = "in";
+    });
+}
 
 $(document).ready(function() {
     getTime();
