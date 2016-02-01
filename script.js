@@ -107,14 +107,14 @@ function setClickListener() {
                 if (d.state == "in") { //if student is in the classroom
                     signOut(id);
                     data['studentData'][i]['state'] = 'out';
-                    console.log("out");
+                    // console.log("out");
                 }
                 else { // if student is out of the classroom
                     signIn(id);
                     saveData(JSON.stringify(data));
                     data['studentData'][i]['state'] = 'in';
                     updateTable();
-                    console.log("in");
+                    // console.log("in");
                 }
             }
         });
@@ -132,7 +132,7 @@ function generateTable() {
 function updateTable() {
     data['studentData'].forEach(function(d, i) {
         var exits = d.outTimes.length;
-        var tOut = d.totalOutTime/1000;
+        var tOut = Math.round(d.totalOutTime/1000)+" s.";
         var idString = 'table' + d.sID;
         $('#'+idString+'exits').html(exits);
         $('#'+idString+'tout').html(tOut);

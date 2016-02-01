@@ -17,7 +17,6 @@ function loadData(d){
 		url: "studentData.txt",
 		success: function(d){
 			data = JSON.parse(d);
-			data = 
 		}
 	})
 }
